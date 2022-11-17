@@ -1,0 +1,95 @@
+.header {
+  background-color: var(--white);
+  margin-left: 250px;
+  padding: 10px 15px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  .header-left {
+    & > svg {
+      font-size: 30px;
+    }
+    .info-wallet {
+      border: solid 1px var(--primary-color);
+      padding: 6px 12px;
+      border-radius: 3px;
+      color: var(--primary-color);
+      font-size: 14px;
+      margin: 0 10px;
+      cursor: unset;
+    }
+  }
+  .header-right {
+    & > ul {
+      margin-bottom: 0;
+      list-style: none;
+      display: inline-flex;
+      & > li {
+        & > div {
+          padding: 10px;
+          color: var(--black);
+          text-decoration: none;
+          & > svg {
+            font-size: 20px;
+          }
+        }
+        .btn--login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > img {
+            border-radius: 50%;
+            width: 30px;
+          }
+          &:hover {
+            background-color: var(--bg);
+            border-radius: 3px;
+          }
+        }
+
+        .btn--notify {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .notify-wrapper {
+            display: none;
+            width: 330px;
+            min-height: 60px;
+            position: absolute;
+            top: 60px;
+            background-color: var(--white);
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            z-index: 10;
+            border-radius: 10px;
+
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            right: 0;
+            transition: all 0.3s ease-in-out;
+            &::before {
+              width: 33%;
+              content: "";
+              position: absolute;
+              top: -25px;
+              right: 0;
+              height: 40px;
+            }
+          }
+
+          &:hover {
+            background-color: var(--bg);
+            border-radius: 50%;
+            .notify-wrapper {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    margin-left: 0;
+  }
+}

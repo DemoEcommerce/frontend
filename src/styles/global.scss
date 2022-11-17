@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #094c9f;
+  --white: #ffffff;
+  --dark: #0000;
+  --bg: #f5f7fc;
+}
+
+.btn--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+@import "./layout.scss";
+@import "./header.scss";
+@import "./home.scss";
+@import "./login.scss";
+@import "./register.scss";
